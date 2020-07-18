@@ -1,23 +1,21 @@
 <template>
   <header>
-    <h1>{{ header }}</h1>
+    <h1>
+      โพสต์ล่าสุด
+    </h1>
   </header>
 </template>
 
-<script>
-import { defineComponent, ref } from 'nuxt-composition-api'
-
-export default defineComponent({
-  setup() {
-    const header = ref('blog')
-
-    return { header }
-  },
-})
-</script>
-
-<style>
+<style lang="scss" scoped>
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  height: 100%;
+  border-bottom: 1px solid #dfe6e9;
+}
+/* header {
   padding: 0.8rem;
   display: flex;
   justify-content: center;
@@ -28,6 +26,5 @@ header {
     tomato 20px,
     tomato 40px
   );
-  /* color: tomato; */
-}
+} */
 </style>
