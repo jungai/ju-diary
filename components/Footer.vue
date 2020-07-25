@@ -1,25 +1,25 @@
 <template>
   <footer>
-    <p>Powerd By Jungai</p>
+    <p>สร้างโดย jungai 🐢</p>
+    <p>Copyright &copy; by jungai 🐢</p>
   </footer>
 </template>
 
 <script></script>
 
-<style>
+<style lang="scss" scoped>
 footer {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  width: 100%;
   bottom: 0;
-  padding: 0.8rem;
-  text-align: center;
-  background-image: repeating-linear-gradient(
-    135deg,
-    white 0px,
-    white 20px,
-    tomato 20px,
-    tomato 40px
-  );
-  /* color: tomato; */
+  max-width: 960px;
+  width: 100%;
+  border-top: 1px solid #dfe6e9;
+  padding: 0.4rem;
+
+  P {
+    text-align: center;
+  }
 }
 </style>
