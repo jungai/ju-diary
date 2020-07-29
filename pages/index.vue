@@ -4,6 +4,7 @@
       v-for="post in posts"
       :key="post.slug"
       :title="post.title"
+      :go-to="post.slug"
       :description="post.description"
     />
   </CardList>
@@ -18,7 +19,6 @@ export default {
   components: { CardList, Card },
   setup(_, ctx) {
     const posts = useAsync(async () => await ctx.root.$content('posts').fetch())
-
     return { posts }
   },
 }
