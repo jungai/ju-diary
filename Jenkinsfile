@@ -20,8 +20,10 @@ pipeline {
             }
         }
         stage('Deploy Runtest ....') {
-          echo "${env.JOB_NAME}"
-          echo "target server -> ${SERVER_IP}"
+            steps {
+                echo "${env.JOB_NAME}"
+                echo "target server -> ${SERVER_IP}"
+            }
         }
     }
 }
