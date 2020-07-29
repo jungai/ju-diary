@@ -6,18 +6,22 @@ pipeline {
         }
     }
     environment {
-        CI = 'true'
+      SERVER_IP = credentials('SERVER_IP')
     }
     stages {
-        stage('Build') {
+        stage('Initial ....') {
             steps {
                 sh 'yarn install'
             }
         }
-        stage('Lint') {
+        stage('Linting ....') {
             steps {
                 sh 'yarn lint'
             }
+        }
+        stage('Deploy Runtest ....') {
+          echo "${env.JOB_NAME}"
+          echo "target server -> ${SERVER_IP}"
         }
     }
 }
