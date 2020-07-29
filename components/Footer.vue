@@ -11,8 +11,6 @@
 footer {
   display: flex;
   flex-direction: column;
-  position: fixed;
-  bottom: 0;
   max-width: 960px;
   width: 100%;
   border-top: 1px solid #dfe6e9;

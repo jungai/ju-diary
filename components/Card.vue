@@ -3,7 +3,7 @@
     <h1 class="title">{{ title }}</h1>
     <span class="spacing" />
     <p>{{ description }}</p>
-    <a class="read-more">อ่านต่อ..</a>
+    <nuxt-link class="read-more" :to="`/blogs/${goTo}`">อ่านต่อ..</nuxt-link>
   </div>
 </template>
 
@@ -22,6 +22,10 @@ export default {
       default: 'code',
     },
     description: {
+      type: String,
+      default: '',
+    },
+    goTo: {
       type: String,
       default: '',
     },
@@ -69,6 +73,7 @@ export default {
     color: red;
     cursor: pointer;
     margin: 0.4rem;
+    text-decoration: none;
   }
 
   > .read-more:hover {
