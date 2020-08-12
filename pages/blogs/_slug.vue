@@ -6,16 +6,13 @@
 </template>
 
 <script>
-import { useAsync } from 'nuxt-composition-api'
-
 export default {
   layout: 'blog',
-  setup(_, ctx) {
-    const slug = ctx.root.$route.params.slug
+  async asyncData({ $content, route }) {
+    const slug = route.params.slug
 
-    const doc = useAsync(
-      async () => await ctx.root.$content('posts').search('slug', slug).fetch()
-    )
+    const doc = await $content('posts').search('slug', slug).fetch()
+
     return { doc }
   },
 }
