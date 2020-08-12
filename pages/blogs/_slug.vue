@@ -8,10 +8,14 @@
 <script>
 export default {
   layout: 'blog',
-  async asyncData({ $content, route }) {
+  async asyncData({ $content, route, error }) {
     const slug = route.params.slug
 
     const doc = await $content('posts').search('slug', slug).fetch()
+
+    if (doc.length === 0) {
+      error({ statusCode: 404, message: 'Post not found' })
+    }
 
     return { doc }
   },
