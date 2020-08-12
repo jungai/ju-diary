@@ -1,8 +1,13 @@
 <template>
-  <div class="container">
-    <h1 v-if="error.statusCode === 404">Page not found</h1>
-    <h1 v-else>An error occurred</h1>
-    <nuxt-link to="/">Home page</nuxt-link>
+  <div class="error">
+    <img
+      src="https://media3.giphy.com/media/l3fZBHqfuBw1mmDGE/giphy.gif"
+      alt="Okay IU"
+      width="400"
+    />
+    <p v-if="error.statusCode === 404">ไม่มีหน้านี้</p>
+    <h1 v-else>เกิดปัญหาบางอย่าง</h1>
+    <nuxt-link to="/">กลับไปหน้าแรก</nuxt-link>
   </div>
 </template>
 
@@ -14,6 +19,15 @@ export default {
       default: null,
     },
   },
-  layout: 'blog', // you can set a custom layout for the error page
+  layout: 'center', // you can set a custom layout for the error page
 }
 </script>
+
+<style scoped lang="scss">
+.error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+</style>
