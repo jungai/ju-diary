@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="blog">
     <nuxt />
   </div>
 </template>
@@ -23,10 +23,11 @@ html {
   margin: 0;
 }
 
-.home {
+.blog {
   margin: 0 auto;
   max-width: 960px;
   width: 100%;
   position: relative;
+  height: 100vh;
 }
 </style>

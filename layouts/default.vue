@@ -38,5 +38,6 @@ html {
   max-width: 960px;
   width: 100%;
   position: relative;
+  height: 100vh;
 }
 </style>

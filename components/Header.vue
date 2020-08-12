@@ -12,7 +12,6 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 70px;
-  height: 100%;
   width: 100%;
   border-bottom: 1px solid #dfe6e9;
 }

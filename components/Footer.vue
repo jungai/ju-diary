@@ -10,6 +10,8 @@
 <style lang="scss" scoped>
 footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
   flex-direction: column;
   max-width: 960px;
   width: 100%;
