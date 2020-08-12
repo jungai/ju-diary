@@ -19,10 +19,17 @@ export default {
 
     return { doc }
   },
+  head() {
+    return {
+      title: this.doc[0].title,
+    }
+  },
 }
 </script>
 
 <style lang="scss">
+@import '~/assets/css/mixins/media.scss';
+
 .content {
   padding: 1em;
 
@@ -31,10 +38,18 @@ export default {
     font-size: 2em;
     margin-bottom: 0.8em;
     border-bottom: tomato 4px solid;
+
+    @include for-phone-only {
+      font-size: 1.4em;
+    }
   }
 
   .nuxt-content {
     font-size: 1.2em;
+
+    @include for-phone-only {
+      font-size: 0.9em;
+    }
   }
 
   .nuxt-content .start::first-letter {
