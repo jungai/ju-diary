@@ -5,12 +5,8 @@
 </template>
 
 <script>
-import {} from 'nuxt-composition-api'
 export default {
   name: 'CardList',
-  setup() {
-    return {}
-  },
 }
 </script>
 

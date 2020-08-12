@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import {} from 'nuxt-composition-api'
-
 export default {
   name: 'Card',
   props: {
@@ -29,9 +27,6 @@ export default {
       type: String,
       default: '',
     },
-  },
-  setup() {
-    return {}
   },
 }
 </script>
