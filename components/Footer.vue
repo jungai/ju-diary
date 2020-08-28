@@ -1,7 +1,6 @@
 <template>
   <footer>
     <p>สร้างโดย jungai 🐢</p>
-    <p>Copyright &copy; by jungai 🐢</p>
   </footer>
 </template>
 
