@@ -44,19 +44,21 @@ export default {
     }
   }
 
-  .nuxt-content {
+  .nuxt-content * {
     font-size: 1.2em;
+    margin: 0.5em 0;
 
     @include for-phone-only {
       font-size: 0.9em;
     }
   }
 
-  .nuxt-content .start::first-letter {
-    float: left;
-    font-size: 3em;
-    margin: 0.2em;
-    color: tomato;
+  .nuxt-content h3 {
+    background-color: tomato;
+    // background-color: #40739e;
+    color: white;
+    display: inline-block;
+    padding: 0 0.3em 0 1em;
   }
 }
 </style>
